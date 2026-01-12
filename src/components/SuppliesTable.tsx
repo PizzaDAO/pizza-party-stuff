@@ -5,6 +5,7 @@ export interface Supply {
   cost: string;
   link: string;
   notes: string;
+  image?: string;
 }
 
 interface SuppliesTableProps {
