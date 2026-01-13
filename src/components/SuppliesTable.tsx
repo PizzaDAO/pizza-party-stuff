@@ -1,3 +1,5 @@
+import { RegionalLinks } from '@/types/region';
+
 export interface Supply {
   id: number;
   item: string;
@@ -6,6 +8,7 @@ export interface Supply {
   link: string;
   notes: string;
   image?: string;
+  regionalLinks?: RegionalLinks;
 }
 
 interface SuppliesTableProps {
