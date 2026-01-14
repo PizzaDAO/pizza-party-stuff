@@ -9,6 +9,8 @@ export interface Supply {
   notes: string;
   image?: string;
   regionalLinks?: RegionalLinks;
+  rank?: number;
+  show?: boolean;
 }
 
 interface SuppliesTableProps {
