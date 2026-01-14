@@ -66,13 +66,13 @@ export default function SuppliesTable2({ supplies }: SuppliesTable2Props) {
           className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex"
         >
           {/* Image - Left Side */}
-          <div className="relative w-1/2 bg-gray-200 overflow-hidden">
+          <div className="relative w-1/2 aspect-square bg-white overflow-hidden">
             {supply.image ? (
               <Image
                 src={getImageSrc(supply.image) || supply.image}
                 alt={supply.item}
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-red-100 to-red-200">
