@@ -35,15 +35,7 @@ export default function RegionalProductsView({ supplies }: RegionalProductsViewP
   return (
     <>
       <div className="mb-8 flex flex-col gap-6">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
-              Pizza Party Stuff from PizzaDAO
-            </h2>
-            <p className="text-gray-600">
-              We have a list of pizza inspired items that we think are cool.
-            </p>
-          </div>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-end gap-4">
           <RegionSelector />
         </div>
 
