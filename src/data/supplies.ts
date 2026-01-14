@@ -162,7 +162,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$29.99",
     link: "https://www.etsy.com/listing/1362590617/pizza-pie-compact-umbrella",
     notes: "",
-    image: "/images/pizza-umbrella.jpg",
+    image: "/images/pizza-umbrella.avif",
     rank: 12,
     show: true,
     regionalLinks: {
