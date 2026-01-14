@@ -92,7 +92,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$12.99",
     link: "https://www.amazon.com/Fairly-Odd-Novelties-FON-10279-Pizza/dp/B07J38FBP9",
     notes: "",
-    image: "/images/pizza-item.avif",
+    image: "/images/pizza-pocket.jpg",
     rank: 7,
     show: true,
     regionalLinks: {
