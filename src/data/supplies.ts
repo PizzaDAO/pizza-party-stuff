@@ -8,6 +8,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$9.99",
     link: "https://www.amazon.com/s?k=red+white+checkered+tablecloth",
     notes: "",
+    image: "/images/tablecloth.jpg",
     rank: 1,
     show: true,
     regionalLinks: {
@@ -21,6 +22,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$10.01",
     link: "https://www.amazon.com/Pizza-Party-Supplies-Pizzeria-Luncheon/dp/B08G864PNP",
     notes: "",
+    image: "/images/plates-napkins.jpg",
     rank: 2,
     show: true,
     regionalLinks: {
@@ -34,7 +36,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$3.19",
     link: "https://www.amazon.com/Pepperoni-Dangle-Earrings-Halloween-Fundraiser/dp/B0CY7Y1SHN",
     notes: "",
-    image: "https://aimg.kwcdn.com/upload_aimg/aimg/57c359ed-798c-4280-afdc-eb7770aa1b9e.png",
+    image: "/images/pizza-earrings.jpg",
     rank: 3,
     show: true,
     regionalLinks: {
@@ -48,6 +50,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$19.99",
     link: "https://halloween.com/dog-pizza-delivery-costume.html",
     notes: "",
+    image: "/images/dog-costume.jpg",
     rank: 4,
     show: true,
     regionalLinks: {
@@ -75,6 +78,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$7.99",
     link: "https://www.chewy.com/frisco-pizza-slice-plush-squeaky-dog/dp/240392",
     notes: "",
+    image: "/images/pizza-item.avif",
     rank: 6,
     show: true,
     regionalLinks: {
@@ -88,6 +92,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$12.99",
     link: "https://www.amazon.com/Fairly-Odd-Novelties-FON-10279-Pizza/dp/B07J38FBP9",
     notes: "",
+    image: "/images/pizza-item.avif",
     rank: 7,
     show: true,
     regionalLinks: {
@@ -115,6 +120,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$5.00",
     link: "https://www.scheels.com/p/19144871071",
     notes: "",
+    image: "/images/pizza-item.avif",
     rank: 9,
     show: true,
     regionalLinks: {
@@ -128,6 +134,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$24.99",
     link: "https://www.amazon.com/s?k=buyenlarge+play+fun+pizza+set",
     notes: "",
+    image: "/images/pizza-item.avif",
     rank: 10,
     show: true,
     regionalLinks: {
@@ -155,6 +162,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$29.99",
     link: "https://www.etsy.com/listing/1362590617/pizza-pie-compact-umbrella",
     notes: "",
+    image: "/images/pizza-item.avif",
     rank: 12,
     show: true,
     regionalLinks: {

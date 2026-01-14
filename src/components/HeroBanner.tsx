@@ -9,9 +9,6 @@ export default function HeroBanner() {
         <h1 className="font-asap-condensed text-4xl md:text-6xl font-bold text-center">
           Pizza Party Stuff
         </h1>
-        <p className="text-xl text-center mt-4 text-red-100">
-          Everything you need for the perfect pizza party
-        </p>
       </div>
     </div>
   );
