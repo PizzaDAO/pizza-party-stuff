@@ -30,6 +30,16 @@ export default function SuppliesTable2({ supplies }: SuppliesTable2Props) {
     return "★".repeat(rating) + "☆".repeat(5 - rating);
   };
 
+  const getImageSrc = (imagePath?: string): string | undefined => {
+    if (!imagePath) return undefined;
+    // If it's an external URL, return as-is
+    if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+      return imagePath;
+    }
+    // For local images, prepend the basePath
+    return `/pizza-party-stuff${imagePath}`;
+  };
+
   const getRegionalLink = (supply: Supply): string | null => {
     if (!selectedRegion) {
       // If no region selected, use the default link
@@ -49,17 +59,17 @@ export default function SuppliesTable2({ supplies }: SuppliesTable2Props) {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
       {supplies.map((supply) => (
-        <div 
-          key={supply.id} 
-          className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        <div
+          key={supply.id}
+          className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex"
         >
-          {/* Image */}
-          <div className="relative h-48 bg-gray-200 overflow-hidden">
+          {/* Image - Left Side */}
+          <div className="relative w-1/2 bg-gray-200 overflow-hidden">
             {supply.image ? (
               <Image
-                src={supply.image}
+                src={getImageSrc(supply.image) || supply.image}
                 alt={supply.item}
                 fill
                 className="object-cover"
@@ -71,40 +81,35 @@ export default function SuppliesTable2({ supplies }: SuppliesTable2Props) {
             )}
           </div>
 
-          {/* Content */}
-          <div className="p-4">
-            {/* Item Name */}
-            <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
-              {supply.item}
-            </h3>
+          {/* Content - Right Side */}
+          <div className="w-1/2 p-4 flex flex-col justify-between">
+            <div>
+              {/* Item Name */}
+              <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-3">
+                {supply.item}
+              </h3>
 
-            {/* Rating */}
-            <div className="mb-3">
-              <span className="text-yellow-400 text-xl" title={`${supply.rating}/5 stars`}>
-                {renderRating(supply.rating)}
-              </span>
-            </div>
-
-            {/* Cost */}
-            <div className="mb-3">
-              <span className="text-2xl font-bold text-gray-900">
-                {supply.cost}
-              </span>
-            </div>
-
-            {/* Notes */}
-            {supply.notes && supply.notes !== "TBA" && supply.notes !== "" && (
-              <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                {supply.notes}
-              </p>
-            )}
-
-            {/* Availability Badge */}
-            {selectedRegion && !isAvailableInRegion(supply) && (
+              {/* Cost */}
               <div className="mb-3">
-                <RegionalAvailabilityBadge region={selectedRegion} />
+                <span className="text-2xl font-bold text-gray-900">
+                  {supply.cost}
+                </span>
               </div>
-            )}
+
+              {/* Notes */}
+              {supply.notes && supply.notes !== "TBA" && supply.notes !== "" && (
+                <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                  {supply.notes}
+                </p>
+              )}
+
+              {/* Availability Badge */}
+              {selectedRegion && !isAvailableInRegion(supply) && (
+                <div className="mb-3">
+                  <RegionalAvailabilityBadge region={selectedRegion} />
+                </div>
+              )}
+            </div>
 
             {/* Link Button */}
             {(() => {
@@ -120,14 +125,13 @@ export default function SuppliesTable2({ supplies }: SuppliesTable2Props) {
                     rel="noopener noreferrer"
                     className="block w-full text-center bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded transition-colors duration-200"
                   >
-                    View Product
+                    Buy
                   </a>
                 );
               }
 
               if (selectedRegion && available && regionalLink) {
                 // Region selected and product available
-                const regionName = REGIONS[selectedRegion].name;
                 return (
                   <a
                     href={regionalLink}
@@ -135,7 +139,7 @@ export default function SuppliesTable2({ supplies }: SuppliesTable2Props) {
                     rel="noopener noreferrer"
                     className="block w-full text-center bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded transition-colors duration-200"
                   >
-                    Buy in {regionName}
+                    Buy
                   </a>
                 );
               }
