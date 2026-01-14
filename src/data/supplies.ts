@@ -120,7 +120,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$5.00",
     link: "https://www.scheels.com/p/19144871071",
     notes: "",
-    image: "/images/pizza-item.avif",
+    image: "/images/pizza-jibbitz.webp",
     rank: 9,
     show: true,
     regionalLinks: {
@@ -134,7 +134,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$24.99",
     link: "https://www.amazon.com/s?k=buyenlarge+play+fun+pizza+set",
     notes: "",
-    image: "/images/pizza-item.avif",
+    image: "/images/pizza-toy.jpg",
     rank: 10,
     show: true,
     regionalLinks: {
@@ -162,7 +162,7 @@ export const pizzaPartySupplies: Supply[] = [
     cost: "$29.99",
     link: "https://www.etsy.com/listing/1362590617/pizza-pie-compact-umbrella",
     notes: "",
-    image: "/images/pizza-item.avif",
+    image: "/images/pizza-umbrella.jpg",
     rank: 12,
     show: true,
     regionalLinks: {
